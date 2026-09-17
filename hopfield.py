@@ -30,6 +30,17 @@ def recall(w, pattern, steps=5):
 
 
 def main():
+    # Representación visual del patrón objetivo (10x10):
+    # . . . . . . . . . .
+    # . . . . . . . . . .
+    # . . . . . . . . . .
+    # . . . # # # # . . .  <- aro/figura central
+    # . . . # . . # . . .
+    # . . . # . . # . . .
+    # . . . # # # # . . .
+    # . . . . . . . . . .
+    # # . . . . . . . .    <- referencia angular en esquina
+    # # . . . . . . . .
     target = np.full((10, 10), -1)
     target[8:10, 0:2] = 1  # referencia fija en esquina
     target[3:7, 3:7] = 1   # figura central
